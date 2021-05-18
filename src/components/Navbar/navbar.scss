@@ -1,4 +1,4 @@
-@import '../../sass/variables';
+@import '../../sass/variables', '../../sass/mixins';
 
 .header {
     padding: .7rem 1.5rem;
@@ -23,6 +23,10 @@
 
     &__breadcrumb {
         display: none;
+
+        @include media(midi) {
+            display: block;
+        }
     }
 
     &__search {
@@ -47,12 +51,28 @@
                 cursor: auto;
                 border-color: #00afef;
             }
+
+            @include media(midi) {
+                width: 0;
+                border-color: transparent;
+                cursor: pointer;
+
+                &:focus {
+                    width: 10rem;
+                    cursor: auto;
+                    border-color: #00afef;
+                }
+            }
         }
     }
 
     &__actions {
         .nav-links {
             display: flex;
+
+            @include media(midi) {
+                display: none;
+            }
 
             .nav-item {
                 position: relative;

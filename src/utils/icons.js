@@ -4,9 +4,9 @@ export function BreadCrumb() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       role="img"
-      width="50px"
+      width="20px"
       viewBox="0 0 448 512"
-      className="icon"
+      className="icon breadcrumb"
     >
       <path
         fill="currentColor"

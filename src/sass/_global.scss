@@ -14,4 +14,9 @@
         top: -1px;
         margin-left: 1px;
     }
+
+    &.breadcrumb {
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
 }
