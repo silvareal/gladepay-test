@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+//media query
+@mixin media($point) {
+
+    $mini: "only screen and (max-width: 600px)";
+    $midi: "only screen and (max-width: 960px)";
+    $maxi: "only screen and (max-width: 1200px)";
+
+    @if $point==mini {
+        @media #{$mini} {
+            @content;
+        }
+    }
+
+    @else if $point==midi {
+        @media #{$midi} {
+            @content;
+        }
+    }
+
+    @else if $point==maxi {
+        @media #{$maxi} {
+            @content;
+        }
+    }
+}

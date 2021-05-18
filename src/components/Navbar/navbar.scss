@@ -1,0 +1,120 @@
+@import '../../sass/variables';
+
+.header {
+    padding: .7rem 1.5rem;
+    line-height: 2.2rem;
+    color: $black;
+    z-index: 20;
+    display: flex;
+    font-weight: 400;
+    justify-content: space-between;
+    right: 0;
+    height: 3.6rem;
+    background-color: #fff;
+    font-family: inherit;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eaecef;
+
+    &__brand {
+        img {
+            max-width: 100px;
+        }
+    }
+
+    &__breadcrumb {
+        display: none;
+    }
+
+    &__search {
+        input {
+            cursor: text;
+            width: 10rem;
+            height: 2rem;
+            color: #4e6e8e;
+            display: inline-block;
+            border: 1px solid #cfd4db;
+            border-radius: 2rem;
+            font-size: .9rem;
+            line-height: 2rem;
+            padding: 0 .5rem 0 2rem;
+            outline: none;
+            transition: all .2s ease;
+            background: #fff url(../../assets/img/search.svg) .6rem .5rem no-repeat;
+            background-size: auto;
+            background-size: 1rem;
+
+            &:focus {
+                cursor: auto;
+                border-color: #00afef;
+            }
+        }
+    }
+
+    &__actions {
+        .nav-links {
+            display: flex;
+
+            .nav-item {
+                position: relative;
+                margin-left: 1.5rem;
+                line-height: 2rem;
+                color: $black;
+
+                .nav-link {
+                    transition: color .3s linear;
+                    color: $black;
+                    font-size: .9rem;
+                    line-height: 1.5rem;
+                    padding: 2px 8px;
+                    text-decoration: none;
+                    border-bottom: none;
+                    text-transform: uppercase;
+                    letter-spacing: .05em;
+
+                    &:not(.external) {
+                        &:hover {
+                            margin-bottom: -2px;
+                            border-bottom: 2px solid $blue;
+                        }
+
+                        &:focus {
+                            margin-bottom: -2px;
+                            border-bottom: 2px solid $blue;
+                        }
+                    }
+
+                    &.router-link-active {
+                        margin-bottom: -2px;
+                        border-bottom: 2px solid $blue;
+                    }
+
+
+                }
+
+
+
+                .dropdown-wrapper {
+                    .dropdown-title {
+                        font-size: .9rem;
+                        font-family: inherit;
+                        color: $black;
+                        cursor: pointer;
+                        line-height: 1.4rem;
+                        background: transparent;
+                        border: none;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .nav-link {
+//     padding: 2px 8px;
+//     border-bottom: none;
+//     font-size: 1em;
+//     text-transform: uppercase;
+//     letter-spacing: .05em;
+//     text-decoration: none;
+// }
