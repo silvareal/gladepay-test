@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/img/logo.png";
 import { BreadCrumb, OpenNewWindow } from "../../utils/icons";
 
 export default function Navbar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => setShowSidebar((value) => !value);
   return (
     <div>
       {/* Top navbar section */}
       <header className="header">
         <div className="flex">
-          <div className="header__breadcrumb">
+          <div className="header__breadcrumb" onClick={toggleSidebar}>
             <BreadCrumb />
           </div>
           <div className="header__brand">
@@ -112,8 +115,13 @@ export default function Navbar() {
       {/* End Top navbar section */}
 
       {/* Sidebar section */}
-      <aside className="sidebar">
-        <nav className="nav-links">
+      <aside
+        className="sidebar"
+        style={{
+          transform: `${!showSidebar ? "translateX(0)" : "translateX(-100%)"}`,
+        }}
+      >
+        <nav className="sidebar__nav">
           <div className="nav-item">
             <a href="/" className="nav-link">
               Home
@@ -183,29 +191,29 @@ export default function Navbar() {
           </div>{" "}
           {/**/}
         </nav>{" "}
-        <ul className="sidebar-links">
+        <ul className="sidebar__links">
           <li>
-            <section className="sidebar-group depth-0">
-              <p className="sidebar-heading open">
+            <section>
+              <p className="sidebar__links--heading">
                 <span>Guide</span> {/**/}
               </p>{" "}
-              <ul className="sidebar-links sidebar-group-items">
+              <ul className="sidebar__links--group">
                 <li>
                   <a href="/docs/#account-setup" className="sidebar-link">
                     Account Setup
                   </a>
                   <ul className="sidebar-sub-headers">
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a href="/docs/#test-accounts" className="sidebar-link">
                         Test Accounts
                       </a>
                     </li>
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a href="/docs/#live-accounts" className="sidebar-link">
                         Live Accounts
                       </a>
                     </li>
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a
                         href="/docs/#using-the-glade-payment-services"
                         className="sidebar-link"
@@ -230,7 +238,7 @@ export default function Navbar() {
                     Prerequisites / Requirements
                   </a>
                   <ul className="sidebar-sub-headers">
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a
                         href="/docs/#https-requirements"
                         className="sidebar-link"
@@ -248,7 +256,7 @@ export default function Navbar() {
                     Glade Inline Checkout
                   </a>
                   <ul className="sidebar-sub-headers">
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a
                         href="/docs/#embed-parameters"
                         className="sidebar-link"
@@ -256,7 +264,7 @@ export default function Navbar() {
                         Embed Parameters
                       </a>
                     </li>
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a
                         href="/docs/#recurring-payment"
                         className="sidebar-link"
@@ -264,7 +272,7 @@ export default function Navbar() {
                         Recurring Payment
                       </a>
                     </li>
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a
                         href="/docs/#installment-payment"
                         className="sidebar-link"
@@ -272,7 +280,7 @@ export default function Navbar() {
                         Installment Payment
                       </a>
                     </li>
-                    <li className="sidebar-sub-header">
+                    <li>
                       <a href="/docs/#split-payment" className="sidebar-link">
                         Split Payment
                       </a>
