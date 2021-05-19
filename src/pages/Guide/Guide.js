@@ -90,7 +90,11 @@ export default function Guide() {
           </h2>
 
           <p>
-            <img src={CheckoutGif} alt="The Interface" />
+            <img
+              style={{ width: "100%" }}
+              src={CheckoutGif}
+              alt="The Interface"
+            />
           </p>
 
           <h2 id="prerequisites-requirements">
