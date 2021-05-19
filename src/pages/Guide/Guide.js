@@ -6,7 +6,7 @@ import CheckoutGif from "../../assets/img/cardpayment.gif";
 export default function Guide() {
   return (
     <Layout>
-      <main>
+      <main className="content-container">
         <div className="main-content">
           <h1 id="guide">
             <a href="#guide" className="header-anchor">
@@ -178,6 +178,10 @@ export default function Guide() {
               breaking changes when an update is introduced.
             </p>
           </div>
+
+          <p>
+            <strong>Live Inline Script</strong>
+          </p>
         </div>
       </main>
     </Layout>

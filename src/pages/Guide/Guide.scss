@@ -1,7 +1,7 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
 
-main {
+.content-container {
     padding-left: 20rem;
 
     @include media(midi) {
