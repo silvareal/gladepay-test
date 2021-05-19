@@ -11,3 +11,68 @@ body {
     padding: 0;
     margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 1.2;
+    font-weight: 500;
+    color: #111;
+}
+
+h1,
+h2,
+h3 {
+    padding-top: 4rem;
+}
+
+h2,
+h3 {
+    margin-top: -3.1rem;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 30px;
+    padding-bottom: .7em;
+    border-bottom: 1px solid #ddd;
+}
+
+a {
+    color: #fb5962;
+    text-decoration: none;
+}
+
+p {
+    word-spacing: .05em;
+}
+
+ol,
+p,
+ul {
+    line-height: 1.2;
+}
+
+ol,
+ul {
+    padding-left: 2em;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}

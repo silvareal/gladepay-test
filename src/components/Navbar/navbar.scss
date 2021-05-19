@@ -3,10 +3,13 @@
 .header {
     padding: .7rem 1.5rem;
     line-height: 2.2rem;
+    position: fixed;
+    top: 0;
     color: $black;
     z-index: 20;
     display: flex;
     font-weight: 400;
+    width: 100%;
     justify-content: space-between;
     right: 0;
     height: 3.6rem;
