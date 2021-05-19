@@ -1,5 +1,4 @@
-@import './font';
-@import './typography';
+@import './sass/variables', './sass/mixins', './typography', './font';
 
 .flex {
     display: flex;
